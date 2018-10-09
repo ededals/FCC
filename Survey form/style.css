@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 29, 2018, 10:16:01 AM
+    Author     : Neo
+*/
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FDEF8D;
+}
+
+#survey-form{
+    border-style: solid;
+    border-radius: 2vh;
+    border-color: #5B2948;
+    width: 400px;
+    background: #FEFADE;
+    border-width: 1px;
+    padding: 5vh;
+}
+
+#description{
+    text-align: center;
+    font-size: 14pt;
+}
+
+h1{
+    margin-top: 0px;
+    text-align: center;
+}
+
+h2{
+    margin-top: 40px;
+    text-align: left;
+    font-size: 12pt;
+    font-family: Arial;
+}
+
+fieldset{
+  border-style: none;
+  padding-left: 0px;
+  margin-left: 0px;
+      
+}
+
+ul{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left:0px;
+    padding-left: 20px;
+    list-style:none;
+}
+
+.contact-label{
+    display: inline-block;
+    width: 3em;
+    text-align: right;
+    margin: 0px;
+}
+
+.widget-wrapper{
+    margin: 1px;
+}
+
+#additional-comments{
+    display:block;
+    margin: 5px;
+}
+
+#submit{
+    display: block;
+    margin-bottom:20px;
+}
+
+#dropdown{
+    height: 23px
+}
+
+footer{
+    font-size:10px;
+}

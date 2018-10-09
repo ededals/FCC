@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Feedback form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+       
+    </head>
+    <body>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <main>
+            <form id="survey-form">
+                <h1 id="title">Feedback form</h1>
+                <p id="description">This form will help us to improve our offer in the future</p> 
+                <section id="contact-section">
+                    <h2>Contact information</h2>
+                    <p class="widget-wrapper">
+                        <label for="name" id="name-label" class="contact-label">Name:</label>
+                        <input id="name" name="name" type="text" placeholder="Input your name" required>
+                    </p>
+                    
+                    <p class="widget-wrapper">
+                        <label for="email" id="email-label" class="contact-label">E-mail:</label>
+                        <input id="email" name="email" type="email" placeholder="Input your e-mail" required>
+                    </p>
+                    <p class="widget-wrapper">
+                        <label for="number" id="number-label" class="contact-label" >Age:</label>
+                        <input id = "number" type="number" min="0" max="125" name="age" placeholder="Age">
+                    </p>
+                    <p class="widget-wrapper">
+                        <label for="dropdown" class="contact-label">Gender:</label>
+                        <select id="dropdown">
+                            <option value="man"> Man</option>
+                            <option value="woman">Woman</option>
+                        </select>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Service feedback</h2>
+                    <fieldset id="service-group">
+                        <legend>How satisfied you were with the service?</legend>
+                        <ul>
+                        
+                            <li>
+                                <input type="radio" name="service-feedback" value="very-satisfied" id ="very-satisfied-service">
+                                <label for="very-satisfied-service">Very satisfied</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="service-feedback" value="satisfied" id ="satisfied-service">
+                                <label for="satisfied-service">Satisfied</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="service-feedback" value="neutral" id ="neutral-service">
+                                <label for="neutral-product">Neutral</label>
+                            </li>
+                            
+                            <li>
+                                <input type="radio" name="service-feedback" value="dissatisfied" id ="dissatisfied-service">
+                               <label for="dissatisfied-service">Dissatisfied</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="service-feedback" value="very-dissatisfied" id ="very-dissatisfied-service">
+                                <label for="very-dissatisfied-service">Very dissatisfied</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset id="product-group">
+                        <legend>How satisfied you were with the product?</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="product-feedback" value="very-satisfied" id ="very-satisfied-product">
+                                <label for="very-satisfied-product">Very satisfied</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="product-feedback" value="satisfied" id ="satisfied-product">
+                                <label for="satisfied-product">Satisfied</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="product-feedback" value="neutral" id ="neutral-product">
+                                <label for="neutral-product">Neutral</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="product-feedback" value="dissatisfied" id ="dissatisfied-product">
+                                <label for="dissatisfied-product">Dissatisfied</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="product-feedback" value="very-dissatisfied" id ="very-dissatisfied-product">
+                                <label for="very-dissatisfied-product">Very dissatisfied</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <p class="widget-wrapper">
+                        <label for="additional-comments">Comments:</label>
+                        <textarea id="additional-comments" rows="4" cols="50"></textarea>
+                        <input type="submit" id="submit" value="Submit">
+                    </p>
+                    <p class="widget-wrapper">
+                        <label for="news-letter-aggree">I aggree to receive information about new offers and campaigns:</label>
+                        <input type="checkbox" id="news-letter-aggree" name="news-letter-aggree" value="1">
+                    </p>
+                    <p class="widget-wrapper">
+                        <label for="data-usage">I agree that my personal data will be used to improve services:</label>
+                        <input type="checkbox" id="data-usage" name="data-usage-aggreed" value="1">
+                    </p>    
+                </section>       
+                
+            </form>
+        </main>
+        <footer>
+            <p>Copyright© 2018 ededals. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
