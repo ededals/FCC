@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Technical documentation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
+    </head>
+    <body>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+            
+        <nav id="navbar">
+            <header id="nav-header">Java script documentation</header>
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-link" href="#Basics">Basics</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Comments">Comments</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Declarations">Declarations</a>
+                    <ul class="nav-list" id="nav-sublist">
+                        <li>
+                            <a class="nav-sublink" href="#Variables">Variables</a>
+                        </li>
+                        <li>
+                            <a class="nav-sublink" href="#Declaring_variables">Declaring variables</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Data_structures_and_types">Data structures and types</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Literals">Literals</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#More_information">More information</a>
+                </li>
+            </ul>
+        </nav> 
+            
+
+        <main id="main-doc">
+            <section class="main-section" id="Basics">
+                <header>Basics</header>
+                <p>JavaScript borrows most of its syntax from Java,
+                    but is also influenced by Awk, Perl and Python.
+                </p>
+                <p>JavaScript is <em>case-sensitive</em>  and uses the <em>Unicode</em> 
+                    character set. For example, the word Früh (which means "early"
+                    in German) could be used as a variable name.
+                </p>
+                <pre><code>var Früh = "foobar";</code></pre>
+                <p>But, the variable <code>früh</code> is not the same as <code>Früh</code> 
+                    because JavaScript is case sensitive.
+                </p>
+                <p>In JavaScript, instructions are called
+                    statements and are separated by semicolons (;).
+                </p>
+                <p>A semicolon is not necessary after a statement if it 
+                    is written on its own line. But if more than one statement 
+                    on a line is desired, then they must be separated by 
+                    semicolons. ECMAScript also has rules for automatic
+                    insertion of semicolons (ASI) to end statements.
+                    (For more information, see the detailed reference
+                    about JavaScript's lexical grammar.) It is
+                    considered best practice, however, to always
+                    write a semicolon after a statement, even when
+                    it is not strictly needed. This practice reduces
+                    the chances of bugs getting into the code.
+                </p>
+                <p>
+                    The source text of JavaScript script gets scanned from left
+                    to right and is converted into a sequence of input elements
+                    which are tokens, control characters, line terminators, 
+                    comments, or whitespace. Spaces, tabs, and newline 
+                    characters are considered whitespace.
+                </p>
+            </section>
+            <section class="main-section" id="Comments">
+                <header>Comments</header>
+                <p>The syntax of <em>comments</em> is the same as in C++ and in
+                    many other languages:</p>
+                <pre>
+                    <code>
+                        <br>
+                        <span> // a one line comment</span>
+                        <br>  
+                        <span>/* this is a longer, </span>
+                        <span>* multi-line comment </span>
+                        <span>*/</span>
+                        <br>
+                        <span>/* You can't, however, /* nest comments */ SyntaxError */</span>
+                        <br>
+                    </code>
+                </pre>
+                <p>
+                    Comments behave like whitespace and are discarded during 
+                    script execution.
+                </p>
+            </section>
+            <section class="main-section" id="Declarations">
+                <header>Declarations</header>
+                <p>
+                   There are three kinds of declarations in JavaScript. 
+                </p>
+                <dl>
+                    <dt>var</dt>
+                    <dd>Declares a variable, optionally initializing it to a 
+                        value.
+                    </dd>
+                    <dt>let</dt>
+                    <dd>Declares a block-scoped, local variable, optionally 
+                        initializing it to a value.
+                    </dd>
+                    <dt>const</dt>
+                    <dd>
+                        Declares a block-scoped, read-only named constant.
+                    </dd>
+                </dl>
+                <section class="sub-section" id="Variables">
+                
+                    <h3>Variables</h3>
+                    <p>
+                        You use variables as symbolic names for values in your 
+                        application. The names of variables, called identifiers,
+                        conform to certain rules.
+                    </p>
+                    <p>
+                        A JavaScript identifier must start with a letter, underscore
+                        (_), or dollar sign ($); subsequent characters can also be
+                        digits (0-9). Because JavaScript is case sensitive, letters
+                        include the characters "A" through "Z" (uppercase) and the
+                        characters "a" through "z" (lowercase).
+                    </p>
+                    <p>
+                        You can use most of ISO 8859-1 or Unicode letters such as
+                        å and ü in identifiers. You can also use the Unicode escape
+                        sequences as characters in identifiers.
+                    </p>
+                    <p>
+                        Some examples of legal names are <code>Number_hits</code>,
+                        <code>temp99</code>, <code>$credit</code>, and 
+                        <code>_name</code>.
+                    </p>
+                </section>
+                <section class="sub-section" id="Declaring_variables">
+                    <h3>Declaring variables</h3>
+                    <p>You can declare a variable in three ways</p>
+                    <ul>
+                        <li>With the keyword <code>var</code>. For example,
+                            <code>var x = 42</code> /This syntax can be used to 
+                            declare both local and global variables.
+                        </li>
+                        <li>
+                            By simply assigning it a value. For example, 
+                            <code>x = 42</code>. If this form is used outside 
+                            of a function, it declares a global variable.
+                            It generates a strict JavaScript warning. 
+                            You shouldn't use this variant.
+                        </li>
+                        <li>
+                            With the keyword<code>let</code> . For example, 
+                            <code>let y = 13</code>. This syntax can be used to declare a 
+                            block-scope local variable. See Variable scope below.
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="main-section" id="Data_structures_and_types">
+                <header>Data structures and types</header>
+                <p>
+                    The latest ECMAScript standard defines seven data types:
+                </p>
+                <ul>
+                    <li>
+                        <p>Six data types that are primitives:</p>
+                        <dl>
+                            <dt>Boolean.</dt>
+                            <dd><code>true</code> and <code>false</code>.</dd>
+                            <dt>null.</dt>
+                            <dd> A special keyword denoting a null value.
+                                Because JavaScript is case-sensitive, <code>null</code> 
+                                is not the same as <code>Null</code>, <code>NULL</code>,
+                                or any other variant
+                            </dd>
+                            <dt>undefined.</dt>
+                            <dd>A top-level property whose value is not defined.</dd>
+                            <dt>Number.</dt>
+                            <dd>An integer or floating point number. For example: 
+                                <code>42</code> or <code>3.14159</code>.</dd>
+                            <dt>String.</dt>
+                            <dd>A sequence of characters that represent a text value. 
+                                For example:  "Howdy"</dd>
+                            <dt>Symbol</dt>
+                            <dd>
+                                (new in ECMAScript 2015). A data type whose instances 
+                                are unique and immutable.
+                            </dd>
+                            
+                        </dl>
+                    </li>
+                    <li>
+                        and Object.
+                    </li>
+                </ul>
+                <p>Although these data types are relatively few, they enable you
+                    to perform useful functions with your applications. Objects 
+                    and functions are the other fundamental elements in the 
+                    language. You can think of objects as named containers for 
+                    values, and functions as procedures that your application 
+                    can perform.
+                </p>
+            </section>
+            <section class="main-section" id="Literals">
+                <header>Literals</header>
+                <p>You use literals to represent values in JavaScript. These are
+                    fixed values, not variables, that you literally provide in 
+                    your script. This section describes the following types
+                    of literals:
+                </p>
+                <ul>
+                    <li>Array literals</li>
+                    <li>Boolean literals</li>
+                    <li>Floating-point literals</li>
+                    <li>Integers</li>
+                    <li>Object literals</li>
+                    <li>RegExp literals</li>
+                    <li>String literals</li>
+                    
+                </ul>
+            </section>
+            <section class="main-section" id="More_information">
+                <header>
+                    More information
+                </header>
+                <p>
+                   This chapter focuses on basic syntax for declarations and
+                   types. To learn more about JavaScript's language constructs, 
+                   see also the following chapters in this guide: 
+                </p>
+                <ul>
+                    <li>
+                        Control flow and error handling
+                    </li>
+                    <li>
+                        Loops and iteration
+                    </li>
+                    <li>
+                        Functions
+                    </li>
+                    <li>
+                        Expressions and operators
+                    </li>
+                </ul>
+                <p>
+                    In the next chapter, we will have a look at control flow 
+                    constructs and error handling.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>All material taken from <a href= "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types"> MDN </a> guide.</p>
+        </footer>
+    </body>
+</html>

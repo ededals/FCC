@@ -1,0 +1,187 @@
+
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#navbar{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    background:white;
+    padding:0;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+#nav-header{
+    text-align:center;
+    font-size: 16pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    border:none;
+
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:0;
+    margin: auto 0 auto 0;
+    
+}
+
+#nav-sublist{
+    display:none;
+}
+
+#hidden-phone{
+    display: none;
+}
+li{
+
+}
+
+.nav-link{
+    display: flex;
+    width: 165px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    margin: 0px 20px 3px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    border-width: 1px;
+    font-size: 10pt;
+}
+
+.nav-link:hover{
+    background:lightgray;
+}
+
+main{
+    margin-top:120px;
+}
+
+header{
+    font-size: 24pt;
+    font-weight: bold;
+    border:solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-left: 1vh;
+}
+
+code{
+    background: #EFF0FA;
+}
+
+pre{
+    background: #EFF0FA;
+    border-left: solid;
+    border-color: #BBB6DF;
+    padding-left: 10px;
+    white-space: normal;
+}
+
+span{
+    display:block;
+}
+h3{
+
+    font-size:14pt;
+}
+dt{
+    font-size:12pt;
+    color:#192D39;
+    margin-left: 15px;
+}
+
+dl{
+    border-style:groove;
+    border-radius: 5px;
+    background:#FCF9E9;
+}
+
+dd{
+    margin-left: 30px;
+    margin-bottom:10px;
+    
+}
+
+footer{
+    font-size: 8pt;
+    border-top:solid;
+    color: gray
+}
+
+@media only screen and (min-width: 1000px) {
+
+    body{
+ 
+    }
+    main{
+        margin-top:0;
+        margin-left: 27vh;
+
+
+    }
+    #navbar{
+        position:fixed;
+        top: 0;
+        width: 25vh;
+        height: 100vh;
+        border-right:solid gray;
+    }
+    #nav-header{
+        padding-left: 0;
+        font-family: 'Hind Siliguri', sans-serif;
+        margin: 2vh 0 2vh 0;
+        font-size: 20pt;
+    }
+    
+    
+    .nav-link{
+        justify-content: flex-start;
+        width:23vh;
+        font-size: 11pt;
+        height: 5vh;
+        margin:0 0 0 0;
+        border-radius: 0px;
+        border: solid gray;
+        border-width: 1px;
+        padding-left: 2vh;
+        
+    }
+    
+    #nav-sublist{
+        display:block;
+    }
+    
+    .nav-sublink{
+        color:black;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 22vh;
+        height: 4vh;
+        margin-left:1vh;
+        border: solid gray;
+        border-width: 1px;
+        padding-left: 2vh;
+        font-size: 11pt;
+    }
+    
+    .nav-sublink:hover{
+        background:lightgray;
+    }
+    footer{
+        margin-left: 25vh;
+    }
+
+}
