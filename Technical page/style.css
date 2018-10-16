@@ -120,42 +120,46 @@ footer{
     color: gray
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 600px) {
 
     body{
  
     }
     main{
         margin-top:0;
-        margin-left: 27vh;
+        margin-left: 22%;
 
 
     }
     #navbar{
         position:fixed;
         top: 0;
-        width: 25vh;
+        width: 20%;
+        min-width:120px;
         height: 100vh;
         border-right:solid gray;
     }
     #nav-header{
         padding-left: 0;
         font-family: 'Hind Siliguri', sans-serif;
-        margin: 2vh 0 2vh 0;
-        font-size: 20pt;
+        font-size: 12pt;
+        width: 100%
     }
     
+    .nav-list{
+        display:block;
+    }
     
     .nav-link{
         justify-content: flex-start;
-        width:23vh;
+        width:90%;
         font-size: 11pt;
-        height: 5vh;
+        height: 35px;
         margin:0 0 0 0;
         border-radius: 0px;
         border: solid gray;
         border-width: 1px;
-        padding-left: 2vh;
+        padding-left: 10%;
         
     }
     
@@ -168,12 +172,12 @@ footer{
         display: flex;
         align-items: center;
         text-decoration: none;
-        width: 22vh;
-        height: 4vh;
-        margin-left:1vh;
+        width: 82%;
+        height: 35px;
+        margin-left:8%;
         border: solid gray;
         border-width: 1px;
-        padding-left: 2vh;
+        padding-left: 10%;
         font-size: 11pt;
     }
     
@@ -183,5 +187,7 @@ footer{
     footer{
         margin-left: 25vh;
     }
+    
+    
 
 }
