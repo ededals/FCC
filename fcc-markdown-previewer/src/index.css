@@ -17,6 +17,7 @@ code {
   display:flex;
   justify-content: center;
   background: #D6A69A;
+  height: 100%
 }
 
 #preview, #editor{
@@ -61,3 +62,22 @@ code {
   box-shadow: 5px 5px 20px;
 
 }
+
+pre {
+  font-family: 'Ubuntu Mono', monospace;
+  background: #F2ECE1;
+  border-left: solid;
+  border-color: #BBB6DF;
+}
+code{
+  font-family: 'Ubuntu Mono', monospace;
+  background: #F2ECE1;
+}
+
+table{
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
