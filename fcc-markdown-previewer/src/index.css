@@ -17,7 +17,8 @@ code {
   display:flex;
   justify-content: center;
   background: #D6A69A;
-  height: 100%
+  height: auto;
+  min-height: 100vh;
 }
 
 #preview, #editor{
@@ -55,6 +56,10 @@ code {
 
 #editor{
   height: 400px;
+}
+
+#preview{
+  min-height:400px;
 }
 
 #preview, #preview-header{
