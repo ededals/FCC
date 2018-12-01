@@ -20,6 +20,9 @@ const DECREMENT_SESSION_LENGTH = "DECREMENT SESSION LENGTH";
 const TIMER_STATE_CHANGE = "TIMER_STATE_CHANGE";
 const RESET = "RESET";
 const TICK = "TICK";
+const TIMER_COLOR_ALERT_LIGHT = "alert-color-lighter";
+const TIMER_COLOR_ALERT_DARK ="alert-color-darker";
+const TIMER_COLOR_NORMAL = "normal-color";
 
 
 
@@ -31,7 +34,8 @@ const defaultState = {
     seconds : DEFAULT_SECONDS,
     minutes : DEFAULT_MINUTES,
     phase : DEFAULT_PHASE,
-    timerState : DEFAULT_TIMER_STATE
+    timerState : DEFAULT_TIMER_STATE,
+    timerColor: TIMER_COLOR_NORMAL
 }
 
 const tick = () =>{
@@ -84,6 +88,7 @@ const reducer = (state = defaultState, action) =>{
     let seconds;
     let minutes;
     let phase;
+    let timerColor;
     switch (action.type){
 
         case DECREMENT_SESSION_LENGTH:
@@ -168,13 +173,26 @@ const reducer = (state = defaultState, action) =>{
 
             }
            
+            //If time left is less than minute color should be red
+            if (minutes === 0){
+                if (state.timerColor === TIMER_COLOR_ALERT_DARK){
+                    timerColor = TIMER_COLOR_ALERT_LIGHT;
+                } else {
+                    timerColor = TIMER_COLOR_ALERT_DARK;
+                }
+            } else {
+                timerColor = TIMER_COLOR_NORMAL;
+            }
+            
+
             
             return Object.assign(
                 {},
                 state,
                 {seconds: seconds,
                 minutes: minutes,
-                phase: phase}
+                phase: phase,
+                timerColor: timerColor}
             )
         case RESET:
             return defaultState;
@@ -190,7 +208,8 @@ const mapStateToProps = (state) => {
         minutes: state.minutes,
         seconds: state.seconds,
         phase: state.phase,
-        timerState: state.timerState
+        timerState: state.timerState,
+        timerColor:state.timerColor,
     }
 }
 
@@ -278,7 +297,8 @@ class Clock extends React.Component{
                 <Timer
                     phase = {this.props.phase}
                     seconds = {this.props.seconds}
-                    minutes = {this.props.minutes} />
+                    minutes = {this.props.minutes}
+                    timerColor = {this.props.timerColor} />
                 <Controls 
                     resetHandler = {this.resetHandler}
                     startStopHandler = {this.startStopHandler}/>
@@ -289,7 +309,7 @@ class Clock extends React.Component{
 
 function SessionBreak(props){
     return (
-        <div>
+        <div id ="time-control-wraper">
             <BreakControl 
                 breakLength = {props.breakLength}
                 breakIncrementHandler = {props.breakIncrementHandler}
@@ -305,15 +325,18 @@ function SessionBreak(props){
 
 function SessionControl(props){
     return(
-        <div>
-            <h2 id = "session-label">Session length</h2>
-            <button 
-                id = "session-decrement"
-                onClick = {props.sessionDecrementHandler}><i class="fas fa-angle-double-down"></i></button>
-            <p id="session-length">{props.sessionLength}</p>
-            <button 
-                id = "session-increment"
-                onClick={props.sessionIncrementHandler}><i class="fas fa-angle-double-up"></i></button>
+        <div className="time-control">
+            <h2 id = "session-label"
+                className = "label">Session length</h2>
+            <div className="time-control-button-wrapper">
+                <button 
+                    id = "session-decrement"
+                    onClick = {props.sessionDecrementHandler}><i class="fas fa-angle-double-down"></i></button>
+                <p id="session-length">{props.sessionLength}</p>
+                <button 
+                    id = "session-increment"
+                    onClick={props.sessionIncrementHandler}><i class="fas fa-angle-double-up"></i></button>
+            </div>
         </div>
     )
 
@@ -321,15 +344,18 @@ function SessionControl(props){
 
 function BreakControl(props){
     return(
-        <div>
-            <h2 id = "break-label">Break length</h2>
-            <button 
-                id = "break-decrement"
-                onClick = {props.breakDecrementHandler}><i class="fas fa-angle-double-down"></i></button>
-            <p id = "break-length">{props.breakLength}</p>
-            <button 
-                id = "break-increment"
-                onClick = {props.breakIncrementHandler}><i class="fas fa-angle-double-up"></i></button>
+        <div className ="time-control">
+            <h2 id = "break-label"
+                className = "label" >Break length</h2>
+            <div className="time-control-button-wrapper">
+                <button 
+                    id = "break-decrement"
+                    onClick = {props.breakDecrementHandler}><i class="fas fa-angle-double-down"></i></button>
+                <p id = "break-length">{props.breakLength}</p>
+                <button 
+                    id = "break-increment"
+                    onClick = {props.breakIncrementHandler}><i class="fas fa-angle-double-up"></i></button>
+            </div>
         </div>
     )
 }
@@ -351,9 +377,11 @@ class Timer extends React.Component{
 
     render(){
         return (
-            <div>
+            <div id = "timer-wrapper">
                 <h2 id = "timer-label">{this.props.phase}</h2>
-                <p id="time-left">{this.timeToString(this.props.minutes)}:{this.timeToString(this.props.seconds)}</p>
+                <p className ={this.props.timerColor} id="time-left">
+                    {this.timeToString(this.props.minutes)}:{this.timeToString(this.props.seconds)}
+                </p>
                 <audio id = "beep" src = "https://goo.gl/65cBl1"></audio>
             </div>
         
