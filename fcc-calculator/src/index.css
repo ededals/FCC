@@ -1,0 +1,163 @@
+
+body{
+  background: #BFB59E;
+}
+
+#root{
+  display:flex;
+  justify-content: center;
+}
+
+.machine{
+  border :1px solid #423E37;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px;
+  display: inline-block;
+  background: #E2DECF;
+  display: inline-block;
+  padding: 8px;
+}
+
+#display-wrapper{
+  margin: auto;
+  width:  95%;
+  margin-bottom: 10px;
+  background-color: #423E37;
+  color: #E3B23C;
+  font-size: 20px;
+  text-align: right;
+  border-radius: 5px;
+  min-height: 115px;
+  padding: 2px;
+
+}
+
+#equation{
+  min-height: 20px;
+  max-width: 358px;
+  color: white;
+  font-family: 'VT323', monospace;
+  word-wrap: break-word;
+
+}
+
+#display{
+  min-height: 20px;
+  font-size: 25px;
+  max-width: 358px;
+  font-family: 'VT323', monospace;
+  font-weight:bold;
+}
+
+.button {
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  background-color:#89B0AE;
+  border: 1px solid #555B6E;
+  color: #555B6E;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button:focus{
+  outline:0;
+  background-color: #7DA09F;
+}
+
+
+#buttons{
+  display:grid;
+  grid-template:
+    'clear clear divide multiply'
+    'seven eight nine subtract'
+    'four five six add'
+    'one two three equals'
+    'zero zero decimal equals';
+}
+
+#clear {
+  grid-area: clear;
+  width:200px;
+  background:#F26565; 
+}
+
+#clear:focus{
+  background: #DC5C5C;
+}
+
+#equals{
+  grid-area: equals;
+  height: 200px;
+  background: #B888CC;
+}
+
+#equals:focus{
+  background: #A87CBA;
+}
+
+#decimal{
+  grid-area: decimal;
+}
+
+#add{
+  grid-area: add;
+}
+
+#subtract{
+  grid-area: subtract;
+}
+
+#multiply{
+  grid-area: multiply;
+}
+
+#divide{
+  grid-area:divide
+}
+
+#zero{
+  grid-area: zero;
+  width: 200px;
+}
+
+#one{
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three{
+  grid-area: three;
+}
+
+#four{
+  grid-area: four;
+}
+
+#five{
+  grid-area: five;
+}
+
+#six{
+  grid-area: six;
+}
+
+#seven{
+  grid-area: seven;
+}
+
+#eight{
+  grid-area: eight;
+}
+
+#nine{
+  grid-area:nine;
+}
+
+footer{
+  text-align: center;
+}
