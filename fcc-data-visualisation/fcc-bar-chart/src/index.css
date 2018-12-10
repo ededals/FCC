@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EFEFEF;
+}
+
+#root{
+  display:flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+#chart-container{
+  background: #ECE1E1;
+  box-shadow: 5px 10px 60px #EDBDBD;
+  border-radius: 20px;
+}
+
+#tooltip{
+  background-color: #D2F3F4;
+  text-align: center;
+  height: auto;
+  border-radius: 5px;
+  padding: 10px 5px 10px 5px;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+.bar {
+  fill: #3454D1;
+}
+
+rect:hover{
+  fill:#5DA9E9;
+}
+
+#title{
+  font-family: 'Crete Round', serif;
+  font-size: 24px;
+}
+
+.axis-text{
+  font-family: 'Crete Round', serif;
+  font-size: 18px;
+}
