@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import './index.css';
-import reducer from './redux/reducers';
+import { createStore, applyMiddleware } from 'redux';
+import reducer from './redux/reducer';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import ChartContainer from './ChartContainer';
 
-import thunk from 'redux-thunk';
-//redux connection
-
-const middleware = applyMiddleware(thunk);
-
+const middleware = applyMiddleware(thunk, logger)
 const store = createStore(reducer, middleware);
 
 
