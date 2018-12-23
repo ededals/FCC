@@ -63,7 +63,7 @@ function renderTreeMap(data){
     console.log(root);
     let nodes = d3.select('svg')
         .selectAll('g')
-        .data(root.descendants())
+        .data(root.leaves())
         .enter()
         .append('g')
         .attr('transform', d=> 'translate(' + [d.x0+chartDimensions.margin.left, d.y0+chartDimensions.margin.top] + ')');
